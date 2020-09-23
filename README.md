@@ -1,10 +1,10 @@
 <div align="center">
 
-[![GitHub contributors](https://img.shields.io/github/contributors/gaserashraf/Flappy-Bird)](https://github.com/gaserashraf/Flappy-Bird/contributors)
-[![GitHub issues](https://img.shields.io/github/issues/gaserashraf/Flappy-Bird)](https://github.com/gaserashraf/Flappy-Bird/issues)
-[![GitHub forks](https://img.shields.io/github/forks/gaserashraf/Flappy-Bird)](https://github.com/gaserashraf/Flappy-Bird/network)
-[![GitHub stars](https://img.shields.io/github/stars/gaserashraf/Flappy-Bird)](https://github.com/gaserashraf/Flappy-Bird/stargazers)
-[![GitHub license](https://img.shields.io/github/license/gaserashraf/Flappy-Bird)](https://github.com/gaserashraf/Flappy-Bird/blob/master/LICENSE)
+[![GitHub contributors](https://img.shields.io/github/contributors/gaserashraf/modern-portfolio-master)](https://github.com/gaserashraf/modern-portfolio-master/contributors)
+[![GitHub issues](https://img.shields.io/github/issues/gaserashraf/modern-portfolio-master)](https://github.com/gaserashraf/modern-portfolio-master/issues)
+[![GitHub forks](https://img.shields.io/github/forks/gaserashraf/modern-portfolio-master)](https://github.com/gaserashraf/modern-portfolio-master/network)
+[![GitHub stars](https://img.shields.io/github/stars/gaserashraf/modern-portfolio-master)](https://github.com/gaserashraf/modern-portfolio-master/stargazers)
+[![GitHub license](https://img.shields.io/github/license/gaserashraf/modern-portfolio-master)](https://github.com/gaserashraf/modern-portfolio-master/blob/master/LICENSE)
 
 </div>
 
