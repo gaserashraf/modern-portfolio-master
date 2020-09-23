@@ -1,0 +1,143 @@
+@include mediaXl {
+
+}
+
+  // Desktops & Laptops
+@include mediaLg {
+    
+}
+  
+  // Tablets & Small Laptops
+@include mediaMd {
+  header{
+      .nav{
+        .first,.second
+          {
+            float: none;
+            width: 100%;
+          }
+          .first{
+            transform: translateX(100%);
+              &-open
+              {
+                  transform: translateX(0);
+
+              }
+            height: auto;
+            padding: 25px 0;
+            img{
+              width: 150px;
+              
+            }
+          }
+          .second{
+            transform: translateX(-100%);
+            &-open
+            {
+                transform: translateX(0);
+            }
+            height: 75vh;
+            li{
+              font-size: 2rem;
+              margin: 2rem 0;
+            }
+          }
+      }
+    }
+    #home
+    {
+      align-items: center;
+      text-align: center;
+      h2{
+        font-size: 5rem;
+        margin-top: 18vw;
+      }
+      p{
+        font-size: 1.5rem;
+      }
+      .icons
+      {
+        justify-content: center;
+      }
+    }
+    #about{
+      text-align: center;
+      .container{
+        padding: 0 .5rem;
+    }
+    .body{
+      display: block;
+      width: 100%;
+      .img{
+        width: 100%;
+      }
+      .text{
+        padding: .5rem;
+        width: 100%;
+      }
+    }
+    .boxs{
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .box{
+      width: 95%;
+      margin-bottom: 2rem;
+    }
+    .box:last-of-type{
+      width: 95%;
+      margin-bottom: 0;
+    }
+  }
+
+  #work{
+    text-align: center;
+    .container{
+      padding: 0 .5rem;
+  }
+  header{
+    padding-bottom: 2rem;
+  }
+  .boxs{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .box{
+    width: 95%;
+    margin-bottom: 1rem;
+  }
+  .box:last-of-type{
+    width: 95%;
+    margin-bottom: 0;
+  }
+}
+#contact{
+    .container{
+      width: 95%;
+      padding: 0;
+      margin: auto;
+      }
+    .f{
+      display: block;
+
+      div{
+        width: 100%;
+        margin-top: 1rem;
+
+      }
+    }
+    .s{
+        display: block;
+        margin-top: 0;
+      div{
+        margin-top: 1rem;
+        width: 100%;
+      }
+    }
+  }
+}
+  
+   // Smartphones
+@include mediaSm {
+
+}

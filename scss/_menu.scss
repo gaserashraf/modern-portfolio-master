@@ -1,0 +1,128 @@
+//start header
+header{
+    .menu
+    {
+        position: fixed;
+        z-index: 3;
+        right: 35px;
+        top:35px;
+        @include easeOut;
+        cursor: pointer;
+        .btn-line{
+            width: 1.8rem;
+            height: .2rem;
+            background-color: white;
+            margin-bottom: .3rem;
+            @include easeOut;
+        }
+        &-close{
+            @include easeOut;
+            transform: rotate(180deg);
+            .btn-line:nth-child(1){
+                transform: rotate(45deg) translate(5px,5px);
+            }
+            .btn-line:nth-child(2){
+                opacity: 0;
+            }
+            .btn-line:nth-child(3){
+    
+                transform: rotate(-45deg) translate(7px,-6px);
+            }
+        }
+    }
+    .nav{
+        position: fixed;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        top:0;
+        left:0;
+        visibility: hidden;
+        &-open
+        {
+            visibility: visible;
+        }
+        .first,.second
+        {
+            @include easeOut;
+            display: flex;
+            flex-flow: column wrap;
+            align-items: center;
+            justify-content: center;
+            float: left;
+            width: 50%;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .first
+        {
+            transform: translateY(-100%);
+            &-open
+            {
+                transform: translateY(0);
+
+            }
+            background-color: rgba(68, 68, 68, 0.679);
+            img{
+                border:5px solid $color-span;
+                border-radius:50%;
+                width: 18rem;
+            }
+        }
+        .second
+        {
+            
+            transform: translateY(100%);
+            &-open
+            {
+                transform: translateY(0);
+            }
+            background-color: rgba(26, 26, 26, 0.753);
+        }
+        ul{
+            text-align: center;
+            li{
+                transition: transform .5s ease-out;
+                transform: translateX(600px);
+                &.show
+                {
+                    transform: translateX(0);
+                }
+                 
+                text-transform: uppercase;
+                font-size: 2.5rem;
+                font-weight: 300;
+                margin: 2vw 0;
+                
+                
+            }
+            a{
+                display: block;
+                
+                transition: all .5s linear 0s;
+
+                &:hover{
+                transform:scale(1.2);
+                    color:$color-span;
+                }
+                
+            }
+            //delay each naw item slide by 0.1s
+            $num: 1 2 3 4;
+            @each $i in $num{
+                li:nth-child(#{$i})
+                {
+                    transition-delay:$i*.1s;
+                }
+            }
+            a:hover{
+                transition: all .5s linear 0s;
+                transform:scale(1.2);
+                color:$color-span;
+            }
+            .active{
+                color:$color-span
+            }
+        }
+    }
+}

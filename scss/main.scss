@@ -1,0 +1,244 @@
+@import 'config';
+@import 'menu';
+@import 'colors';
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html
+{
+    height: 100%;
+}
+body{
+    background-color: #444;
+}
+body.main
+{
+    background: url("../img/background.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100%;
+}
+body
+{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+    color: $color-main;
+}
+.op
+{
+    background-color: set-backgroundOp-color($color-main);
+    height: 100%;
+    overflow: hidden;
+    height: 100%;
+}
+.container{
+    padding: 4rem;
+}
+a
+{
+    text-decoration: none;
+    color: inherit;
+}
+h1,h2{
+    font-size: 6rem;
+    font-weight: 400;
+}
+p{
+    font-size: 2rem;
+}
+ul{
+    list-style: none;
+}
+span{
+    color:$color-span;
+}
+// start home
+#home
+{
+    
+    min-height: calc(100vh - 60px);
+    h2{
+        margin-top: 20vh;
+    }
+    p
+    {
+        margin: 20px 0;
+        background-color: rgba(68, 68, 68, 0.453);
+        padding: 10px;
+    }
+    .icons
+    {
+        margin-top: 1rem;
+        display: flex;
+        a
+        {
+            margin-right: 15px;
+            @include easeOut;
+            &:hover{
+                color:$color-span
+            }
+        }
+        
+    }
+}
+
+//start about
+#about{
+    .container{
+        padding: 0 4rem;
+    }
+    header{
+        margin-top: 5rem;
+        p{
+            background-color: lighten(rgba(68, 68, 68, 0.453),5%);
+        }
+    }
+    .body{
+        display: flex;
+        justify-content: space-between;
+        padding: 3rem 0;
+        .img{
+            width: 33.333%;
+            display: flex;
+            justify-content:center;
+            align-items: center;
+
+            img{
+                border-radius: 50%;
+                border:5px solid $color-span;
+            }
+        }
+        .text{
+            width: 63%;
+            h2{
+                font-size: 3rem;
+
+            }
+            p{
+                font-size: 1.5rem;
+            }
+        }
+    }
+    .boxs{
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 2rem;
+    }
+    .box{
+        width: 30%;
+        background-color: lighten(#444,10%);
+        border-bottom: 5px solid $color-span;
+        padding: .5rem;
+        small{
+            display: block;
+            margin: 1rem 0;
+        }
+        p{
+            font-size: 15px;
+            padding-bottom: 1rem;
+        }
+    }
+}
+.about-footer{
+    background-color: darken(#444,10%);
+    text-align: center;
+    padding: .8rem 0;
+}
+//start work
+#work{
+    .container{
+        padding: 0 4rem;
+    }
+    header{
+        margin: 5rem 0 1rem 0;
+       
+        p{
+            background-color: lighten(rgba(68, 68, 68, 0.453),5%);
+        }
+        
+    }
+    .boxs{
+        
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-bottom: 2rem;
+    }
+    .box{
+        width: 24%;
+        margin-bottom: 1rem;
+        .img{
+            
+            img{
+                width: 100%;
+                border: 3px solid #fff;
+                cursor: pointer;
+            }
+            img:hover{
+                @include easeOut;
+                border: 3px solid $color-span;
+                opacity: .5;
+            }
+        }
+        
+        
+        span{
+            display: block;
+            padding: .5rem;
+            cursor: pointer;
+        }
+        span:first-of-type{
+            color:#444;
+            background-color: rgb(170, 170, 170);
+            margin-bottom: .25rem;
+        }
+        span:first-of-type:hover{
+            background-color:$color-span;
+        }
+        span:last-of-type{
+
+            color:#fff;
+            background-color: black;
+        }
+        span:last-of-type:hover{
+            background-color:$color-span;
+            color:black
+         }
+    }
+}
+
+#contact
+{
+    padding-bottom:3rem;
+    p{
+        color: $color-span;
+        border: 2px solid white;
+        padding: 20px 30px;
+        transition:all .5s ease-out;
+        &:hover{
+            color: black;
+            background-color: $color-span;
+            transform: scale(.8);
+        }
+    }
+    .f{
+        display: flex;
+        justify-content: space-around;
+        div{
+            width: 500px;
+        }
+    }
+    .s{
+        margin-top:5rem;
+        display: flex;
+        justify-content: center;
+        div{
+            width: 500px;
+        }
+    }
+    
+}
+@import 'mobile';

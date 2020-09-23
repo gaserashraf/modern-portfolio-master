@@ -1,0 +1,115 @@
+.colors
+{
+    width: 200px;
+    height: 100px;
+    background-color: blanchedalmond;
+    position: fixed;
+    top:10%;
+    @include easeOut;
+    //
+    &-hide{
+        transform:translateX(-200px);
+    }
+    .icon{
+        width: 25px;
+        height: 25px;
+        background-color: white;
+        position: absolute;
+        left: 100%;
+        top:34%;
+        text-align: center;
+        i{
+            color: black;
+            &.active{
+                animation: rotate 1s linear infinite;
+            }
+        }
+        
+        @keyframes rotate {
+            0%   { transform: rotate(0); }
+            100% {  transform: rotate(360deg); }
+        }
+    }
+    .color{
+        height: 100%;
+        ul{
+            height: 100%;
+            padding: 20px 30px;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            li{
+                width: 25px ;
+                height: 25px;
+                border-radius: 50%;
+                cursor: pointer;
+                opacity: .5;
+                &.active{
+                    opacity: 1;
+                }
+            }
+            $colors:#eece1a,#28df99,#133b5c,#931a25;
+            @for $i from 1 through length($colors){
+                li:nth-child(#{$i}){
+                    background-color: nth($colors,$i);
+                }
+            }
+            
+        }
+    }
+}
+
+//set colors
+$themes:(
+    primary:(color:#eece1a),
+    secondary:(color:#28df99),
+    info:(color:#133b5c),
+    danger:(color:#931a25)
+);
+@each $theme,$map in $themes {
+
+    .#{$theme}{
+        span{
+            color:map-get($map,color);
+        }
+        header .nav ul a:hover{
+            color:map-get($map,color);
+        }
+        header .nav ul .active {
+            color:map-get($map,color);
+
+        }
+        header .nav .first img {
+            border-color:map-get($map,color);
+            
+        }
+        #about .body .img img
+        {
+            border-color:map-get($map,color);
+        }
+        #about .box {
+            border-color:map-get($map,color);
+        }
+        #work .box .img img:hover {
+            border-color:map-get($map,color);
+        }
+        #work .box span:first-of-type:hover {
+            background-color: map-get($map,color);
+        }
+        #work .box span:last-of-type:hover {
+        background-color:  map-get($map,color);
+        color: black;
+        }
+        #contact p {
+            color:map-get($map,color);
+        }
+        #contact p:hover {
+            color: black;
+            background-color: map-get($map,color);
+        }
+        #home .icons a:hover {
+            color: map-get($map,color);
+          }
+    }
+}
