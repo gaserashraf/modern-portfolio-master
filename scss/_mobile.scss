@@ -10,6 +10,7 @@
   // Tablets & Small Laptops
 @include mediaMd {
   header{
+    
       .nav{
         .first,.second
           {
@@ -24,7 +25,7 @@
 
               }
             height: auto;
-            padding: 25px 0;
+            height: 30%;
             img{
               width: 150px;
               
@@ -32,11 +33,14 @@
           }
           .second{
             transform: translateX(-100%);
+            display: flex;
+            align-items: center;
             &-open
             {
                 transform: translateX(0);
             }
-            height: 75vh;
+           
+            height: 70%;
             li{
               font-size: 2rem;
               margin: 2rem 0;
@@ -46,11 +50,15 @@
     }
     #home
     {
+
       align-items: center;
       text-align: center;
+      .container{
+        padding:5rem 1rem;
+      }
       h2{
         font-size: 5rem;
-        margin-top: 18vw;
+        margin-top: 2rem;
       }
       p{
         font-size: 1.5rem;
